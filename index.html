@@ -433,10 +433,22 @@ footer{background:#0a0c1a;padding:clamp(50px,6vw,70px) var(--g) clamp(24px,3vw,3
     <div class="pill ltn">📱 App Preview</div>
     <h2 class="dh">A sneak peek at<br>what's <span class="g g-anim">coming.</span></h2>
     <p>EverRide is launching soon. Here's an exclusive first look at the app — beautifully designed, built for Indian commuters.</p>
-    <div class="nform glass">
-      <input class="nfinput" type="email" placeholder="Enter your email to get early access" id="email-inp">
-      <button class="nfsub magnetic-btn" onclick="handleNotify()">Notify Me 🔔</button>
-    </div>
+<form name="early-access" method="POST" data-netlify="true" class="n glass" netlify>
+  <!-- Netlify hidden field -->
+  <input type="hidden" name="form-name" value="early-access" />
+
+  <input 
+    class="nfinput" 
+    type="email" 
+    name="email"
+    placeholder="Enter your email to get early access" 
+    required
+  >
+
+  <button type="submit" class="nfsub magnetic-btn">
+    Notify Me 🔔
+  </button>
+</form>
     <div id="nfy-msg" style="font-size:14px;color:var(--olive);font-weight:700;margin-top:12px;min-height:20px"></div>
   </div>
 
@@ -449,12 +461,12 @@ footer{background:#0a0c1a;padding:clamp(50px,6vw,70px) var(--g) clamp(24px,3vw,3
           <div style="display:flex;justify-content:space-between;align-items:center;padding:30px 18px 8px;font-size:11px;font-weight:800;color:#122C6F"><span style="font-family:'Epilogue',sans-serif">9:41</span><div style="display:flex;gap:3px;align-items:center;font-size:10px"><span>▲▲▲</span><span style="margin-left:4px">⚡</span></div></div>
           <div style="padding:4px 18px 16px">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
-              <div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#EDAB0C;margin-bottom:3px">Good morning ☀️</div><div style="font-family:'Epilogue',sans-serif;font-size:19px;font-weight:800;color:#122C6F;line-height:1.2">Where are you<br><span style="color:#EDAB0C">headed today?</span></div></div>
+              <div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-trans:uppercase;color:#EDAB0C;margin-bottom:3px">Good morning ☀️</div><div style="font-family:'Epilogue',sans-serif;font-size:19px;font-weight:800;color:#122C6F;line-height:1.2">Where are you<br><span style="color:#EDAB0C">headed today?</span></div></div>
               <div style="position:relative"><div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFC87D,#EDAB0C);display:flex;align-items:center;justify-content:center;font-family:'Epilogue',sans-serif;font-size:15px;font-weight:800;color:#0a0600;box-shadow:0 6px 16px rgba(237,171,12,0.45)">A</div><div style="position:absolute;top:-2px;right:-2px;width:12px;height:12px;border-radius:50%;background:#ef4444;border:2px solid #FBF8F2;font-size:6px;font-weight:800;color:white;display:flex;align-items:center;justify-content:center">2</div></div>
             </div>
             <div class="glass" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px"><div style="width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#122C6F,#1a3a8a);display:flex;align-items:center;justify-content:center;font-size:12px">📍</div><span style="font-size:12px;color:#bbb;font-weight:500;flex:1">Enter pickup location</span><div style="width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#FFC87D,#EDAB0C);display:flex;align-items:center;justify-content:center;font-size:11px">🎤</div></div>
           </div>
-          <div style="padding:0 14px;margin-bottom:0"><div style="border-radius:20px;padding:16px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(18,44,111,0.92),rgba(26,58,138,0.96));box-shadow:0 10px 32px rgba(18,44,111,0.4)"><div style="position:absolute;width:100px;height:100px;border-radius:50%;background:#EDAB0C;filter:blur(40px);opacity:.22;right:-20px;top:-20px"></div><div style="display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:3px 10px;font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:8px">🎯 Offers & Deals</div><div style="font-family:'Epilogue',sans-serif;font-size:16px;font-weight:800;color:white;line-height:1.25;margin-bottom:10px">Get 30% off your<br>first Metro ride! 🚇</div><div style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#FFC87D,#EDAB0C);border-radius:100px;padding:6px 14px;font-size:10px;font-weight:800;color:#0a0600;box-shadow:0 4px 14px rgba(237,171,12,0.5)">CLAIM NOW →</div></div></div>
+          <div style="padding:0 14px;margin-bottom:0"><div style="border-radius:20px;padding:16px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(18,44,111,0.92),rgba(26,58,138,0.96));box-shadow:0 10px 32px rgba(18,44,111,0.4)"><div style="position:absolute;width:100px;height:100px;border-radius:50%;background:#EDAB0C;filter:blur(40px);opacity:.22;right:-20px;top:-20px"></div><div style="display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:3px 10px;font-size:8px;font-weight:800;letter-spacing:.1em;text-trans:uppercase;color:rgba(255,255,255,0.7);margin-bottom:8px">🎯 Offers & Deals</div><div style="font-family:'Epilogue',sans-serif;font-size:16px;font-weight:800;color:white;line-height:1.25;margin-bottom:10px">Get 30% off your<br>first Metro ride! 🚇</div><div style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#FFC87D,#EDAB0C);border-radius:100px;padding:6px 14px;font-size:10px;font-weight:800;color:#0a0600;box-shadow:0 4px 14px rgba(237,171,12,0.5)">CLAIM NOW →</div></div></div>
           <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px 10px"><div style="font-family:'Epilogue',sans-serif;font-size:13px;font-weight:800;color:#122C6F">Our Services</div><div style="font-size:10px;font-weight:700;color:#EDAB0C">View all →</div></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px">
             <div class="glass" style="padding:14px 12px;position:relative;overflow:hidden;border-radius:18px"><div style="width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#5E8704,#729e06);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:8px;box-shadow:0 6px 14px rgba(94,135,4,0.38)">🚌</div><div style="font-family:'Epilogue',sans-serif;font-size:13px;font-weight:800;color:#122C6F">Bus</div><div style="font-size:9px;color:#5E8704;font-weight:600;margin-top:1px">Eco-friendly</div></div>
